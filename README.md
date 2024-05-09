@@ -1,7 +1,7 @@
 # java library
 
 
-First of all in order for it to work you should add config.properties files with fields "username" and "password".
+First of all in order for it to work you should add config.properties files with fields "username" and "password" in the folder, where you have src folder.
 
 
 Currently it has next bug: 
