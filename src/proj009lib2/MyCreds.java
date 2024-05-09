@@ -25,8 +25,5 @@ public class MyCreds {
 } catch(IOException e) {
 	e.printStackTrace();
 }
-//		String rootPath = Thread.currentThread().getContextClassLoader().getResourceAsStream("").getPath();
-//		String rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
-		
 	}
 }

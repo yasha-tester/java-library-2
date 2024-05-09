@@ -7,15 +7,13 @@ public class Connection {
 
 	static MyCreds creds = new MyCreds();
 
+	private static java.sql.Connection conn = null;
 	public void connect() {
-		Connection connection = null;
 		
 	try {
-//		String strUserName = MyCreds.userName.toString();
-//		String strPwd = MyCreds.pwd.toString();
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		connection = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/libraryDb", MyCreds.userName, MyCreds.pwd);
-		System.out.println("connected");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/libraryDb", MyCreds.userName, MyCreds.pwd);
+		System.out.println("user " + MyCreds.userName + " is connected");
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
