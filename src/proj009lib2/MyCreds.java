@@ -1,28 +1,32 @@
 package proj009lib2;
 
 import java.util.Properties;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class MyCreds {
 	
 	public static String userName = "me";
 	public static String pwd;
-
+	
 	public void defineCreds() {
-		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-		String configPath = rootPath + "config.properties";
 		Properties myProps = new Properties();
 		
-		try {
-		myProps.load(new FileInputStream(configPath));
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-		
-		userName = myProps.getProperty("username");
-		pwd = myProps.getProperty("password");
-		
+		try {			
+			InputStream inputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
+			if(inputStream != null) {
+				myProps.load(inputStream);
+				userName = myProps.getProperty("username");
+				pwd = myProps.getProperty("password");
+				inputStream.close();
+			} else {
+				System.err.println("Unable to find config.properties file");
+			}
+} catch(IOException e) {
+	e.printStackTrace();
+}
+//		String rootPath = Thread.currentThread().getContextClassLoader().getResourceAsStream("").getPath();
+//		String rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
 		
 	}
 }
