@@ -1,7 +1,7 @@
 # java library
 
 
-First of all in order for it to work you should add config.properties files with fields "username" and "password" in the folder, where you have src folder.
+First of all in order for it to work you should add config.properties files with fields "username" and "password" your src folder or your proj009lib2 folder (as it doesn't work bc of a bug its hard to tell yet)
 
 
 Currently it has next bug: 
