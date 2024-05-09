@@ -7,8 +7,8 @@ public class MyLibrary {
 	
 
 	public static void main(String[] args) {
-		con.connect();
 		creds.defineCreds();
+		con.connect();
 		System.out.println("Hello library");
 		System.out.println(MyCreds.userName);
 	}
