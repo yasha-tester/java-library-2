@@ -7,7 +7,8 @@ public class Connection {
 
 	static MyCreds creds = new MyCreds();
 
-	private static java.sql.Connection conn = null;
+	public java.sql.Connection conn = null;
+	// opens a connection
 	public void connect() {
 		
 	try {
@@ -21,27 +22,36 @@ public class Connection {
 		resultSet = statement.executeQuery("select * from books");
 		
 		// here is
-		String code;
-		String title;
+		String bookNameStr;
+		String titleStr;
 		while(resultSet.next()) {
 			System.out.println("List of books :");
-			code = resultSet.getString("bookName");
-			title = resultSet.getString("bookAuthor").trim();
-			System.out.println("name: " + code + ";"
-					+ " author: " + title + ";");
+			bookNameStr = resultSet.getString("bookName");
+			titleStr = resultSet.getString("bookAuthor").trim();
+			System.out.println("name: " + bookNameStr + ";"
+					+ " author: " + titleStr + ";");
 		}
 		// the code
-		
-		resultSet.close();
+		resultSet.close(); 
 		statement.close();
-		conn.close();
+		/*
+		 *  conn.close();
+		 */
 		
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 
 }
-	public void check() {
-
+	// closes a connection
+	public void closeConnection() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/libraryDb", MyCreds.userName, MyCreds.pwd);
+			conn.close();
+			System.out.println("user " + MyCreds.userName + " is disconnected");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
