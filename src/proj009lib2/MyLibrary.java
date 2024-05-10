@@ -9,13 +9,17 @@ public class MyLibrary {
 
 	public static void main(String[] args) {
 		creds.defineCreds();
-
-//		con.connect();
-		crud.dbBookAdd("testName", "testAuthor");
-		System.out.println("/");
-		System.out.println("/");
 		System.out.println("Hello library!");
 		System.out.println("Name of the user is: " + MyCreds.userName);
+		System.out.println("/");
+		System.out.println("/");
+		crud.showBooks();
+
+		System.out.println("/");
+//		con.connect();
+		crud.dbBookAdd("testName", "testAuthor");
+
+
 	}
 
 }

@@ -14,26 +14,8 @@ public class Connection {
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/libraryDb", MyCreds.userName, MyCreds.pwd);
-		System.out.println("user " + MyCreds.userName + " is connected");
-		
-		Statement statement;
-		statement = conn.createStatement();
-		ResultSet resultSet;
-		resultSet = statement.executeQuery("select * from books");
-		
-		// here is
-		String bookNameStr;
-		String titleStr;
-		while(resultSet.next()) {
-			System.out.println("List of books :");
-			bookNameStr = resultSet.getString("bookName");
-			titleStr = resultSet.getString("bookAuthor").trim();
-			System.out.println("name: " + bookNameStr + ";"
-					+ " author: " + titleStr + ";");
-		}
-		// the code
-		resultSet.close(); 
-		statement.close();
+		System.out.println("connected");
+		System.out.println("/");
 		/*
 		 *  conn.close();
 		 */
@@ -49,7 +31,9 @@ public class Connection {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/libraryDb", MyCreds.userName, MyCreds.pwd);
 			conn.close();
-			System.out.println("user " + MyCreds.userName + " is disconnected");
+			System.out.println("/");
+
+			System.out.println("disconnected");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
