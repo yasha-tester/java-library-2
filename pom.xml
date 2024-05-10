@@ -3,6 +3,13 @@
   <groupId>proj009lib2</groupId>
   <artifactId>proj009lib2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+	 <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+	</dependency>
+</dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -20,7 +27,25 @@
         <configuration>
           <release>14</release>
         </configuration>
-      </plugin>
+        </plugin>
+   <!--            <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+                <mainClass>yashauser.App</mainClass>
+            </configuration>
+        </plugin>-->
     </plugins>
   </build>
+  <distributionManagement>
+	<repository>
+		<uniqueVersion>false</uniqueVersion>
+		<id>newRepo1</id>
+		<name>New Repository</name>
+		<url>/home/yasha-user/projectsFolder/codes/eclipseWorkspaceDir/proj009lib2/newRepo1</url>
+		<layout>default</layout>
+	</repository>
+  </distributionManagement>
+
 </project>
