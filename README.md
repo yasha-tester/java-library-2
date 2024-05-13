@@ -15,14 +15,11 @@ So i want to use jsp for this.
 I might need to import mysql-connector one more time for maven, but this far it works as it is.
 So now i want to link my form from JSP with a Servlet.
 
-when i build i get next error:
+when i submit i get
 
 <code>
-...
+File not found
 
-...
-Failed to deploy artifacts/metadata: Cannot access /home/yasha-user/projectsFolder/codes/eclipseWorkspaceDir/proj009lib2/newRepo1 with type default using the available connector factories: BasicRepositoryConnectorFactory: Cannot access /home/yasha-user/projectsFolder/codes/eclipseWorkspaceDir/proj009lib2/newRepo1 using the registered transporter factories: HttpTransporterFactory, FileTransporterFactory, WagonTransporterFactory
-...
-
+Firefox can’t find the file at /home/{myUser}/projectsFolder/codes/eclipseWorkspaceDir/proj009lib2/target/classes/proj009lib2/RequestHandler?text1=r665.
 ...
 </code>

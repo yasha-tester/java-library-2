@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>proj009lib2</groupId>
   <artifactId>proj009lib2</artifactId>
@@ -28,12 +28,12 @@
           <release>14</release>
         </configuration>
         </plugin>
-   <!--            <plugin>
+<!--		<plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
-                <mainClass>yashauser.App</mainClass>
+                <mainClass>bin.proj009lib2.MyLibrary.java</mainClass>
             </configuration>
         </plugin>-->
     </plugins>
@@ -41,11 +41,10 @@
   <distributionManagement>
 	<repository>
 		<uniqueVersion>false</uniqueVersion>
-		<id>newRepo1</id>
+		<id>src</id>
 		<name>New Repository</name>
-		<url>/home/yasha-user/projectsFolder/codes/eclipseWorkspaceDir/proj009lib2/newRepo1</url>
+		<url>file:/home/yasha-user/projectsFolder/codes/eclipseWorkspaceDir</url>
 		<layout>default</layout>
 	</repository>
   </distributionManagement>
-
 </project>
