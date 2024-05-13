@@ -10,10 +10,10 @@ edit book
 delete book
 
 To add books and so on i need inputs.
-So i want to use jsp for this. 
+So i want to use html for this. 
 
 I might need to import mysql-connector one more time for maven, but this far it works as it is.
-So now i want to link my form from JSP with a Servlet.
+So now i want to link my form from HTNL with a Servlet.
 
 when i submit i get
 
