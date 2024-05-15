@@ -19,8 +19,7 @@ wasd
 just go fast
 
 
-
-#how to run this java library app:
+# how to run this java library app:
 
 
 1). First of all you want to add config.properties file with username={yourMySQLusername} and password={yourMySQLpassword} (without brackets) to your [src] folder.
