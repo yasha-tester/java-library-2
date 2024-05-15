@@ -3,8 +3,12 @@ package proj009lib2;
 import java.io.IOException;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
 import java.io.*;
 
+@WebServlet("RequestHandler")
 public class RequestHandler implements Servlet {
 	
 ServletConfig config = null;
