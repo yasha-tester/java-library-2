@@ -11,6 +11,8 @@ delete book
 To add books and so on i need inputs.
 So i want to use html for this. 
 
+i deleted lib that contained mysql-connector bc maven seems to generate it by itself
+
 <h3> how to run: </h3>
 wasd
 <h3> how to run: </h3>
