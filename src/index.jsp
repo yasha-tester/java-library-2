@@ -5,9 +5,21 @@
 <body>
 <h2>Hello library!</h2>
 <p>Text</p>
-<form action="RequestHandler" method="post">
 
-<input type="submit" value="Submit">
+<form action="RequestHandler">
+<input type="submit" value="Request Handler">
 </form>
+
+<form action="ReadBooks" method="post">
+<input type="submit" value="Read Books">
+</form>
+
+
+<form action="CreateBook" method="post">
+<input type="text" name="title" value="title">
+<input type="text" name="author" value="author">
+<input type="submit" value="Create Book">
+</form>
+
 </body>
 </html>

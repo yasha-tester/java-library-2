@@ -4,19 +4,24 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DatabaseCRUD {
-	Connection connection = new Connection();
+	static Connection connection = new Connection();
+	static MyCreds creds = new MyCreds();
 	
 	// create books
 	public void dbBookAdd(String nameValue, String authorValue) {
-		
 		// it opens and then also closes connection
-		connection.connect();
+		
+		creds.defineCreds();
 		
 		Statement statement;
 		ResultSet resultSet;
 		try {
+			connection.connect();
 		statement = (Statement) connection.conn.createStatement();
-		resultSet = statement.executeQuery("select * from books;");
+		
+//		statement.executeQuery("INSERT INTO books (\"bookName\", \"bookAuthor\") VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
+		statement.executeUpdate("INSERT INTO books(bookName, bookAuthor) VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
+//		resultSet = statement.executeQuery("select * from books;");
 		//
 		System.out.println("(test) Added book:");
 		System.out.println(nameValue);
@@ -31,11 +36,12 @@ public class DatabaseCRUD {
 	// read books
 	public void showBooks() {
 		
-		connection.connect();
+		creds.defineCreds();
 		
 		Statement statement;
 		ResultSet resultSet;
 		try {
+			connection.connect();
 		statement = (Statement) connection.conn.createStatement();
 		resultSet = statement.executeQuery("select * from books;");
 		String bookNameStr;

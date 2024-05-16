@@ -13,6 +13,12 @@ So i want to use html for this.
 
 i deleted lib that contained mysql-connector bc maven seems to generate it by itself
 
+# what im currently doing:
+
+My problem for today is when i compile this project it doesn't change its code from the old one to new one.
+MySQL queries are working, so when i'll sort it all out i think im going to be close to finishing CRUD part of this app.
+
+
 <h3> how to run: </h3>
 wasd
 <h3> how to run: </h3>
@@ -46,3 +52,5 @@ just go fast
 8). then you run your server and get to localhost:8080/{yourTomcatServerFolder} and it easily works! ;)
 
 <h2> as simple as that! </h2>
+
+
