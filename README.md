@@ -8,16 +8,16 @@ add book
 edit book
 delete book
 
-To add books and so on i need inputs.
-So i want to use html for this. 
-
-i deleted lib that contained mysql-connector bc maven seems to generate it by itself
+And i'll use html forms as input sources
 
 # what im currently doing:
 
-My problem for today is when i compile this project it doesn't change its code from the old one to new one.
-MySQL queries are working, so when i'll sort it all out i think im going to be close to finishing CRUD part of this app.
-
+I just added Create Read and Delete functionality.
+Next up: 
+1) Add Edit
+2) Make Read and Delete better (I want to show Read data to the browser and not only to Tomcat console. And i maybe want to rethink Delete function, bc it deletes all the files with specified name, and you might want to delete just one such file for example)
+3) Rethink GUI and make it seem a normal app
+*4) Write something similar or even functionally the same in JavaFX or React+Java instead of html/jsp. 
 
 <h3> how to run: </h3>
 wasd

@@ -21,5 +21,11 @@
 <input type="submit" value="Create Book">
 </form>
 
+<form action="DeleteBook" method="post">
+<input type="text" name="title" value="title">
+<input type="text" name="author" value="author">
+<input type="submit" value="Delete Book">
+</form>
+
 </body>
 </html>

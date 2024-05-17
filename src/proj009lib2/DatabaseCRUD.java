@@ -19,7 +19,7 @@ public class DatabaseCRUD {
 			connection.connect();
 		statement = (Statement) connection.conn.createStatement();
 		
-//		statement.executeQuery("INSERT INTO books (\"bookName\", \"bookAuthor\") VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
+//		statement.executeQuery("INSERT INTO books (bookName, bookAuthor) VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
 		statement.executeUpdate("INSERT INTO books(bookName, bookAuthor) VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
 //		resultSet = statement.executeQuery("select * from books;");
 		//
@@ -46,8 +46,10 @@ public class DatabaseCRUD {
 		resultSet = statement.executeQuery("select * from books;");
 		String bookNameStr;
 		String titleStr;
+                
+                System.out.println("List of books:");
+                
 		while(resultSet.next()) {
-			System.out.println("List of books:");
 			bookNameStr = resultSet.getString("bookName");
 			titleStr = resultSet.getString("bookAuthor").trim();
 			System.out.println("name: " + bookNameStr + ";"
@@ -62,19 +64,32 @@ public class DatabaseCRUD {
 	
 	// update book
 	public void dbBookEdit() {
-		connection.connect();
-		//
 		
-		//
 		connection.closeConnection();
 	}
 	
 	// delete book
-	public void dbBookRemove() {
-		connection.connect();
-		//
+	public void dbBookRemove(String nameValue, String authorValue) {
 		
+            creds.defineCreds();
+		
+		Statement statement;
+		ResultSet resultSet;
+		try {
+			connection.connect();
+		statement = (Statement) connection.conn.createStatement();
+		
+//		statement.executeQuery("INSERT INTO books (bookName, bookAuthor) VALUES(\"" + nameValue + "\", \"" + authorValue + "\");");
+		statement.executeUpdate("DELETE FROM books WHERE bookName = \"" + nameValue + "\" AND bookAuthor = \"" + authorValue + "\";");
+//		resultSet = statement.executeQuery("select * from books;");
 		//
+		System.out.println("(test) Deleted book:");
+		System.out.println(nameValue);
+		System.out.println(authorValue);
+		//
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		connection.closeConnection();
 	}
 }
