@@ -2,20 +2,17 @@
 
 
 
-I want to put methods to DatabaseCRUD:
-show books
-add book
-edit book
-delete book
+All the output is shown in the Tomcat console.
 
-And i'll use html forms as input sources
+As every IDE is bugged on my machine and don't apply changes when i rebuild my project since not that long ago im in search of workaround or even fix of this bug. I would like to continue coding normally, so im busy solving it and then i'll post probably follow further mentioned plans.
 
 # what im currently doing:
 
-I just added Create Read and Delete functionality.
+I just added Create, Read, Update and Delete functionality.
+
 Next up: 
-1) Add Edit
-2) Make Read and Delete better (I want to show Read data to the browser and not only to Tomcat console. And i maybe want to rethink Delete function, bc it deletes all the files with specified name, and you might want to delete just one such file for example)
+1) Make Read and Delete better (I want to show Read data to the browser and not only to Tomcat console. And i maybe want to rethink Delete function, bc it deletes all the files with specified name, and you might want to delete just one such file for example)
+4) Add login and management system for buying and taking a books (separately) (BIG PLAN)
 3) Rethink GUI and make it seem a normal app
 *4) Write something similar or even functionally the same in JavaFX or React+Java instead of html/jsp. 
 

@@ -27,5 +27,17 @@
 <input type="submit" value="Delete Book">
 </form>
 
+<form action="EditBook" method="post">
+    Edit book
+<input type="text" name="title" value="title">
+<input type="text" name="author" value="author">
+
+
+to
+<input type="text" name="editedTitle" value="title">
+<input type="text" name="editedAuthor" value="author">
+<input type="submit" value="Edit Book">
+</form>
+
 </body>
 </html>
